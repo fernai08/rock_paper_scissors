@@ -1,4 +1,4 @@
-# The Odin Project >> Rock | Paper | Scissors Game
+# Tgihe Odin Project >> Rock | Paper | Scissors Game
 This are my solutions for Part 1 of the rock, paper, scissors game from The Odin Project course.
 ## Part 1 - Writing the Javascript
 ### Description
