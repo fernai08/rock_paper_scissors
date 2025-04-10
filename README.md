@@ -21,7 +21,7 @@ Through this project, I practiced and developed my understanding of:
 
 The game lets you play Rock, Paper, Scissors against the computer. First to 5 points wins!
 
-👉 [Click here to play the game!](https://yourusername.github.io/rock-paper-scissors/)  
+👉 [Click here to play the game!](https://fernai08.github.io/rock_paper_scissors/)  
 _(Replace this link with your actual GitHub Pages URL)_
 
 ---
