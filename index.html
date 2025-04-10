@@ -5,10 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
-    <script src="Javascript.js"></script>
+    <script src="Javascript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div class="game-container">
+        <div class="title">
+
+            <h1 class="site-title">Rock Paper Scissors</h1>
+            <p>Make your choice!</p>
+        </div>
+        <div class="btn-container">
+            <button value="rock" id="rock"><img src="/Media/rock-hand-design.png" alt=""></button>
+            <button value="paper" id="paper"><img src="/Media/paper-hand-design.png" alt=""></button>
+            <button value="scissors" id="scissors"><img src="/Media/scissors-hand-design.png" alt=""></button>
+        </div>
+        <div class="result" id="result"></div>
+        <div class="score" id="score">
+            <div class="c-score">
+                <h4>CPU</h4>
+                <div class="computer-score" id="computerScore"></div>
+            </div>
+            <div class="h-score">
+                <h4>Player</h4>
+                <div class="human-score" id="humanScore"></div>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 

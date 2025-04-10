@@ -5,6 +5,19 @@ let scissors = "scissors";
 let humanScore = 0;
 let computerScore = 0;
 
+const buttons = document.querySelectorAll("button");
+const showresult = document.querySelector("#result");
+const showHumanScore = document.querySelector("#humanScore"); 
+const showComputerScore = document.querySelector("#computerScore");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const humanChoice = button.value;
+    const computerChoice = getComputerChoice();
+    console.log(playRound(humanChoice, computerChoice));
+  });
+});
+
 // Function getComputerChoice //
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3);
@@ -16,26 +29,15 @@ function getComputerChoice() {
     return scissors;
   }
 }
-
-// Function getHumanChoice //
-function getHumanChoice() {
-  let userChoice = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
-
-  if (userChoice === rock || userChoice === paper || userChoice === scissors) {
-    return userChoice;
-  } else {
-    alert("Invalid Input, try again!");
-    return getHumanChoice(); // Ask again until valid input
-  }
-}
-
 // Function playRound, to determine the winner of the round and return the score //
 
 function playRound(humanChoice, computerChoice) {
   console.log(`You chose: ${humanChoice}`);
   console.log(`Computer chose: ${computerChoice}`);
+  
 
   if (humanChoice === computerChoice) {
+    showresult.textContent = "it's a tie!";
     return "It's a tie!";
   } else if (
     (humanChoice === rock && computerChoice === scissors) ||
@@ -43,52 +45,15 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === scissors && computerChoice === paper)
   ) {
     humanScore++;
+    showresult.textContent = "You Win this round!";
+    showHumanScore.textContent = humanScore;
     return "You win this round!";
   } else {
     computerScore++;
+    showresult.textContent = "You lose this round!";
+    showComputerScore.textContent = computerScore;
     return "You lose this round!";
+
   }
+  
 }
-// Function playGame , five rounds will be played and in each round we will collect humanChoice and computerChoice //
-
-function playGame() {
-  // Round 1 //
-  let humanChoice = getHumanChoice();
-  let computerChoice = getComputerChoice();
-  console.log(playRound(humanChoice, computerChoice));
-  console.log("Human Score: " + humanScore, "Computer Score: " + computerScore);
-
-  // Round 2 //
-  humanChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  console.log(playRound(humanChoice, computerChoice));
-  console.log("Human Score: " + humanScore, "Computer Score: " + computerScore);
-
-  // Round 3 //
-  humanChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  console.log(playRound(humanChoice, computerChoice));
-  console.log("Human Score: " + humanScore, "Computer Score: " + computerScore);
-
-  // Round 4 //
-  humanChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  console.log(playRound(humanChoice, computerChoice));
-  console.log("Human Score: " + humanScore, "Computer Score: " + computerScore);
-
-  // Round 5 //
-  humanChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  console.log(playRound(humanChoice, computerChoice));
-  console.log("Human Score: " + humanScore, "Computer Score: " + computerScore);
-
-  if (humanScore > computerScore) {
-    return "you win!!";
-  } else if (humanScore < computerScore) {
-    return "You Loose!!";
-  } else if (humanScore === computerScore) {
-    return "It's a tie!!";
-  }
-}
-
-console.log(playGame());

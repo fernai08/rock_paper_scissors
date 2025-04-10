@@ -1,0 +1,118 @@
+* {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: black;
+ 
+}
+body {
+  
+  background: rgb(255,72,196);
+  background: linear-gradient(90deg, rgba(255,72,196,1) 0%, rgba(243,234,95,1) 4%, rgba(43,209,252,1) 96%, rgba(192,77,249,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.game-container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  width: 30%;
+  border-radius: 2%;
+  background: rgba(51, 170, 51, .1);
+  box-shadow: 0 4px 8px 0 rgba(171, 176, 145, 0.9);
+ 
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  width: 93%;
+  height: 50%;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  background-color: rgba(230, 235, 208, 0.904);
+  border: solid rgba(95, 201, 243, 0.472) 4px;
+}
+
+
+h1, p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+h1 {
+  font-family: Londrina Shadow;
+  font-size: 50px;
+}
+p {
+  font-family: montserrat;
+}
+.btn-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+button {
+  padding: 10px;
+  border: none;
+  background: rgba(138, 140, 139, 0.4);
+  border: solid rgba(138, 140, 139, 0.7) 4px;
+  box-shadow: 0 2px 4px 0 rgba(138, 140, 139, 0.4);
+  width: 20%;
+  border-radius: 10%;
+  height: fit-content;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+button:hover {
+  background: rgba(138, 140, 139, 0.9);
+}
+svg {
+  height: cover;
+}
+.result {
+  font-family: montserrat;
+  width: 80%;
+  background: rgba(138, 140, 139, 0.4);
+  height: 15%;
+  display: flex;
+  margin: 20px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.score {
+  font-family: montserrat;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+ 
+}
+.c-score, .h-score {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  background: rgba(138, 140, 139, 0.4);
+  box-shadow: 0 2px 4px 0 rgba(73, 74, 74, 0.4);
+  width: 30%;
+  border-radius: 20px;
+  height: 40%;
+}
