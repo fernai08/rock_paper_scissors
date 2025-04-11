@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  text-align: center;
 
   width: 93%;
   height: 50%;
@@ -84,6 +84,10 @@ button:hover {
 svg {
   height: cover;
 }
+button img {
+  pointer-events: none;
+  
+}
 .result {
   font-family: montserrat;
   width: 80%;
@@ -122,6 +126,8 @@ svg {
   @media  (max-width:768px) {
     .game-container {
       width: 95%;
+      height: 100%;
     }
+
     
   }
