@@ -84,10 +84,7 @@ button:hover {
 svg {
   height: cover;
 }
-button img {
-  pointer-events: none;
-  
-}
+
 .result {
   font-family: montserrat;
   width: 80%;
