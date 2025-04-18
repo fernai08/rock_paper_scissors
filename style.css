@@ -85,6 +85,16 @@ svg {
   height: cover;
 }
 
+.selection-log {
+  font-family: montserrat;
+  font-weight: bold;
+  width: 80%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
 .result {
   font-family: montserrat;
   width: 80%;

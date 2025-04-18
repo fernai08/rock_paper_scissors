@@ -9,6 +9,7 @@ const buttons = document.querySelectorAll("button");
 const showresult = document.querySelector("#result");
 const showHumanScore = document.querySelector("#humanScore"); 
 const showComputerScore = document.querySelector("#computerScore");
+const selectionLog = document.querySelector("#selection-log");
 
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
@@ -31,11 +32,28 @@ function getComputerChoice() {
 }
 // Function playRound, to determine the winner of the round and return the score //
 
+function showSelection (humanChoice, computerChoice) {
+  selectionLog.innerHTML = "";
+
+  const humanImg = document.createElement("img");
+  const computerImg = document.createElement("img");
+  humanImg.src = `media/${humanChoice}.png`;
+  humanImg.alt = humanChoice;
+  humanImg.style.width = "50px";
+
+  computerImg.src = `media/${computerChoice}.png`;
+  computerImg.alt = computerChoice;
+  computerImg.style.width = "50px";
+
+  selectionLog.append("Player: ", humanImg, " CPU: ", computerImg);
+}
+
+
 function playRound(humanChoice, computerChoice) {
   console.log(`You chose: ${humanChoice}`);
   console.log(`Computer chose: ${computerChoice}`);
-  
-
+  showSelection(humanChoice, computerChoice);
+ 
   if (humanChoice === computerChoice) {
     showresult.textContent = "it's a tie!";
     return "It's a tie!";
